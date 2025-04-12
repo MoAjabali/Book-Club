@@ -8,7 +8,7 @@
       isset($_COOKIE['user_email']) &&
       $check_db->checkUser($_COOKIE['remember_me'], $_COOKIE['user_email']))
     ) {
-      header("location: index.php");
+      header("location: login.php");
     }else{
       setcookie("user_fullname", $_COOKIE['user_fullname'], ['expires' => time() + (30 * 24 * 60 * 60)]);
       setcookie("user_email", $_COOKIE['user_email'], ['expires' => time() + (30 * 24 * 60 * 60)]);
