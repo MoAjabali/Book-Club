@@ -1,0 +1,33 @@
+/* all */
+*{
+  font-family: "sourcesanspro", sans-serif;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body{
+  font-family: "sourcesanspro", sans-serif;
+
+  padding: 0px;
+  margin: 0px;
+}
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .container { width: 750px; }
+  .container-content { width: 750px; }
+}
+@media (min-width: 992px) {
+  .container { width: 970px; }
+  .container-content { width: 970px; }
+}
+@media (min-width: 1200px) {
+  .container { width: 1170px; }
+  .container-content { width: 1170px; }
+}
+/* finish all */
