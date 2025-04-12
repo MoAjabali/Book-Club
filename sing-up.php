@@ -74,7 +74,7 @@
                   <input type="checkbox" checked="checked" name="remember_me_btn"/>
                   <div class="control__indicator"></div>
                 </label>
-                <span class="ml-auto"><a href="./index.php" class="forgot-pass">or sing in</a></span> 
+                <span class="ml-auto"><a href="./login.php" class="forgot-pass">or sing in</a></span> 
               </div>
 
               <input type="submit" value="Sing Up" class="btn text-white btn-block btn-primary">
