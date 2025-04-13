@@ -40,7 +40,7 @@
 
     function getBooks(){
       $stmt = $this->db->getConnection()->prepare(
-        "SELECT books.book_path, books.book_title, books.book_description, authors.author_name 
+        "SELECT books.book_id,books.book_path, books.book_title, books.book_description, authors.author_name 
         FROM books LEFT JOIN authors ON books.author_id = authors.author_id 
         ORDER BY books.book_uploaded_at"
       );
@@ -75,6 +75,19 @@
       );
       $stmt->bindParam(1, $book_name, PDO::PARAM_STR);
       $stmt->bindParam(2, $book_author, PDO::PARAM_STR);
+      $stmt->execute();
+      $result = $stmt->fetchAll();
+      $this->db->close();
+      return $result[0];
+    }
+    function getBookById($book_id){
+      $stmt = $this->db->getConnection()->prepare(
+        "SELECT books.*, authors.author_name
+        FROM books 
+        LEFT JOIN authors ON books.author_id = authors.author_id 
+        WHERE books.book_id = ?"
+      );
+      $stmt->bindParam(1, $book_id, PDO::PARAM_INT);
       $stmt->execute();
       $result = $stmt->fetchAll();
       $this->db->close();

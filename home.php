@@ -54,7 +54,7 @@
             try {
               $myBooks = new BookController();
               $books = ($_REQUEST)? $myBooks->searchForBooks($_REQUEST["searchFor"]): $myBooks->getBooks();
-              if (!$books) 
+              if (!$books)
                 echo "<div class='text-white d-flex flex-column'> <b>No Books Founds</b> </div>";
               foreach ($books as $book) {
                 echo<<<"bookBox"
@@ -67,8 +67,8 @@
                       <p>$book[book_description]</p>
                     </article>
                     <section>
-                      <a href="$book[book_path]"><i class="fas fa-download"></i></a>
-                      <a href="$book[book_path]" class="btn bg-wh">Read</a>
+                      <a href="./$book[book_path]"><i class="fas fa-download"></i></a>
+                      <a href="read.php?book_id=$book[book_id]" class="btn bg-wh">Read</a>
                     </section>
                   </div>
                 bookBox;

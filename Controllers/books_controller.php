@@ -25,6 +25,10 @@
       return $this->bookDB->searchForBooks($book);
     }
 
+    function getBookById($book_id){
+      return $this->bookDB->getBookById($book_id);
+    }
+
     function uploadFile($input_name, $type, $maxSizeInMB = 100) : string {
       if (!isset($_FILES[$input_name])) // Check if the file exist
         throw new Exception("There is no file to upload.");
