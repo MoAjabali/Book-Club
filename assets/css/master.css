@@ -240,6 +240,17 @@ footer div{
   font-weight: 900;
   margin: 0px;
 }
+.home .main > div > div > div figure{
+  /* max-width: 300px; */
+  /* flex: 0 0 250px; */
+  align-self: center;
+}
+.home .main > div > div > div figure img{
+  /* width: 100%; */
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
 .home .main > div > div > div > article > div> p{
   color: var(--alt-color);
   text-transform: none;
