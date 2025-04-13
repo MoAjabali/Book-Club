@@ -40,7 +40,7 @@
 
     function getBooks(){
       $stmt = $this->db->getConnection()->prepare(
-        "SELECT books.book_id,books.book_path, books.book_title, books.book_description, authors.author_name 
+        "SELECT books.book_cover_image, books.book_id,books.book_path, books.book_title, books.book_description, authors.author_name 
         FROM books LEFT JOIN authors ON books.author_id = authors.author_id 
         ORDER BY books.book_uploaded_at"
       );
@@ -68,7 +68,7 @@
 
     function getBook($book_name, $book_author){
       $stmt = $this->db->getConnection()->prepare(
-        "SELECT books.book_path, books.book_title, books.book_description, authors.author_name
+        "SELECT books.book_cover_image, books.book_path, books.book_title, books.book_description, authors.author_name
         FROM books LEFT JOIN authors ON books.author_id = authors.author_id 
         ORDER BY books.book_uploaded_at 
         WHERE books.book_title LIKE ? || authors.author_name LIKE ? "

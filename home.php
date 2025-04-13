@@ -57,8 +57,13 @@
               if (!$books)
                 echo "<div class='text-white d-flex flex-column'> <b>No Books Founds</b> </div>";
               foreach ($books as $book) {
+                // $bookPDFName = basename($book["book_path"]);
                 echo<<<"bookBox"
                   <div class="text-white d-flex flex-column">
+                    <figure>
+                      <img src="$book[book_cover_image]" alt="book cover img" >
+                      <!-- <figcaption>$book[book_title]</figcaption> -->
+                    </figure>
                     <article>
                       <div>
                         <h3>$book[book_title]</h3>
@@ -67,7 +72,7 @@
                       <p>$book[book_description]</p>
                     </article>
                     <section>
-                      <a href="./$book[book_path]"><i class="fas fa-download"></i></a>
+                      <a href="./download.php?file=$book[book_path]"><i class="fas fa-download"></i></a>
                       <a href="read.php?book_id=$book[book_id]" class="btn bg-wh">Read</a>
                     </section>
                   </div>
