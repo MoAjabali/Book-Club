@@ -1,74 +1,88 @@
 <p align="center">
-  <img src="./logo.png" />
+  <!-- <img src="./logo.png" /> -->
   <h1 align="center"><a href=""> Book Club </a></h1>
   <p align="center">
-    Website to read upload download Books, and comments on book.
+    Website to read, upload, and download Books.
   <br>
 </p>
 
-## Table of contents
+## Table of Contents
 - [Overview](#overview)
   - [Quick Introduction](#quick-introduction)
-  - [Challenge Requirements](#challenge-requirements)
-  - [My implants](#my-implants)
-  - [Screenshots](#screenshots-📸)
-    - [Original website](#original-website)
-    - [Mine](#mine-🌚)
+  - [Features](#features)
+  - [Screenshots](#screenshots)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [what I learned](#what-i-learned)
+- [My Process](#my-process)
+  - [Built With](#built-with)
+  - [What I Learned](#what-i-learned)
+  - [Continued Development](#continued-development)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
 - [Author](#author)
 - [Special Thanks](#special-thanks)
-<!-- Over Look the projects -->
-## Overview
 
+## Overview
 ### Quick Introduction
 Hello Book Lovers, this is a website for Books. You can do All the above:
-- Read A Book
-- Download A Book
-- Upload A Book
-- comment on book -say your opinion-
+- 📚 Browse and search through book collection
+- 🔐 Secure user authentication system
+- ⬆️ Upload books in PDF format
+- ⬇️ Download books for offline reading
+- 📖 Online book reader
+- 👤 User profile management
+- 🔍 Advanced search functionality
+- 📱 Responsive design for all devices
+> Note: I want to have a comments section but time don't help.
+<!-- - comment on book -say your opinion- -->
 
 ### Screenshot
 #### book Club 📚
+>  soon
+
 ### Links
-- **github url:** [click me]()
-- **Visit website:** [click me]()
+- **github url:** [click me](https://github.com/mohammed-aljablai/Book-Club)
+- **Visit website:** soon
 
 ## My process
 ### Built with
-<!-- ### what i use -->
+- **Backend:**
+  - PHP 7.4+
+  - MySQL
+  - PDO for database operations
+- **Frontend:**
+  - HTML5 & CSS3
+  - Bootstrap 5
+  - JavaScript/jQuery
+- **Architecture:**
+  - MVC Design Pattern
+
 ### What I learned
+- update a sensitive info: when I update the password or personal info I have first to check if it was him or not by both token and email -user id for my website-.
+- upload file: in uploading files we need to use special things, in addition how to handel files.
+- Security: I have focused in how to make my wesite as secure as posible.
+- Design Pattern: I use MVC in my design pattern.
+- Authentication
+- token 
 ### Continued development
-<!-- ### Want to focus on  -->
-### Useful resources
-<!-- Resources -->
+- I would like to continue in security
+- And the author filed I tried to show the authors exist in my db.
+- in addition the comments section, i Just need a table for it.
 
+## Getting Started
 
-<!-- How to contribute -->
-<!-- ## Contributing -->
+### Prerequisites
+- XAMPP (PHP 7.4+, MySQL, Apache)
+- Modern web browser
+- Git (optional)
 
-<!-- In case people has problem or issues -->
-<!-- ## Bugs and feature requests
-If your problem or idea is not addressed yet, [please open a new issue](https://reponame/issues/new). 
-Have a bug or a feature request? Please first read the [issue guidelines](https://reponame/blob/master/CONTRIBUTING.md) and search for existing and closed issues.-->
-
+### Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/mohammed-aljablai/Book-Club.git
+```
 <!-- How programme the web -->
 ## Author
-<!-- ## Creators -->
-<!-- ## contributor -->
-<!-- ## programmer -->
-
-
-<!-- Here Thanks for a special person -->
-<!-- ## Thanks -->
-<!-- ## Acknowledgments -->
-
-
-<!-- Here Will but the Copy Rights -->
-<!-- ## Copyright and license -->
+- [The Known Known 😎](https://github.com/mohammed-aljablai)
 
 # stars ✨ will help
-<!-- # give i star 🌟 if you like it 👍🏻 -->
-<!-- # stars 💫 and follow enough to make me happy 😊  -->
