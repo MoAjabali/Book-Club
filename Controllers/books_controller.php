@@ -10,6 +10,13 @@
 
     // todo: Upload A book
     function addBook($data){
+      echo $data['author_name'];
+      echo "<br>";
+      echo "hello <br>";
+      echo $this->bookDB->getAuthor($data['author_name']);
+      echo "hello <br>";
+      echo "<br>";
+      echo "hello <br>";
       $data+=["author_id" => 0];
       // $inputs_array["book_description"] = ($inputs_array["book_description"]) ? $inputs_array["book_description"] : null;
       // echo  ($inputs_array["book_description"]) ? "true" : "false" ;

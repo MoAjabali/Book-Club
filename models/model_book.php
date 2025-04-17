@@ -93,4 +93,25 @@
       $this->db->close();
       return $result[0];
     }
+
+    function getAuthor($author_name) {
+      // Search for existing author
+      $stmt = $this->db->getConnection()->prepare("SELECT author_id FROM authors WHERE author_name = ?");
+      $stmt->bindParam(1, $author_name, PDO::PARAM_STR);
+      $stmt->execute();
+      $result = $stmt->fetchAll();
+      $this->db->close();
+      if ($result)
+          return $result[0]['author_id']; // Author exists, return their ID
+      else 
+          return $this->createAuthor($author_name); // Author doesn't exist, create new one
+    }
+
+    function createAuthor($author_name) {
+      $stmt = $this->db->getConnection()->prepare("INSERT INTO authors (author_name) VALUES (?)");
+      $stmt->bindParam(1, $author_name, PDO::PARAM_STR);
+      $stmt->execute();
+      $this->db->close();
+      return $this->getAuthor($author_name);
+    }
   }

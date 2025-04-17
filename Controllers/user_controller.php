@@ -7,7 +7,6 @@
     public function __construct(){
       $this->userModel = new UserDB("book_club", "root");
     }
-
     private function getRememberToken(){
       if (!isset($_COOKIE['remember_me']))
         throw new Exception("No valid session found");
