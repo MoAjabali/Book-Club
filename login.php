@@ -1,5 +1,5 @@
 <?php
-    include "controllers/redirect_to_home.php";
+  include "controllers/redirect_to_home.php";
   function popupMsg($msg){
     echo <<<"msg"
     <div class="alert popup alert-danger alert-dismissible fade show" role="alert">
@@ -43,60 +43,44 @@
   <body>
   <div class="content">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 order-md-2">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-6 order-up">
           <img src="assets/images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
         </div>
         <div class="col-md-6 contents">
           <div class="row justify-content-center">
             <div class="col-md-8">
               <div class="mb-4">
-              <h3>Sign In to <strong></strong></h3>
-              <p class="mb-4">The Reader Club, Where you can share Books read them and even download them and more.</p>
-            </div>
-            <form action="" method="post">
-              <div class="form-group first">
-                <label for="username">Email</label>
-                <input type="email" class="form-control" id="username" name="user_email" required>
+                <h3>Sign In to <strong>Book Club</strong></h3>
+                <p class="mb-4">The Reader Club, Where you can share Books read them and even download them and more.</p>
               </div>
-              <div class="form-group last mb-4">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="user_password" required>
+              <form action="" method="post">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control p-2" id="username" name="user_email" placeholder="name@example.com" required>
+                  <label for="username" >Email address</label>
+                </div>
+                <div class="form-floating mb-4">
+                  <input type="password" class="form-control p-2" id="password" name="user_password" placeholder="Password" required>
+                  <label for="password">Password</label>
+                </div>
                 
-              </div>
-              
-              <div class="d-flex mb-5 align-items-center">
-                <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
-                  <input type="checkbox" checked="checked" name="remember_me_btn"/>
-                  <div class="control__indicator"></div>
-                </label>
-                <span class="ml-auto"><a href="./sing-up.php" class="forgot-pass">or sing up</a></span> 
-              </div>
+                <div class="d-flex mb-4 align-items-center">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" checked name="remember_me_btn" id="remember">
+                    <label class="form-check-label" for="remember">Remember me</label>
+                  </div>
+                  <span class="ms-auto"><a href="./sing-up.php" class="text-decoration-none">or sign up</a></span> 
+                </div>
 
-              <input type="submit" value="Log In" class="btn text-white btn-block btn-primary">
-
-              <!-- <span class="d-block text-left my-4 text-muted"> or sign in with</span>
-              
-              <div class="social-login" align="center">
-                <a href="#" class="facebook">
-                  <span class="icon-facebook mr-3"></span> 
-                </a>
-                <a href="#" class="twitter">
-                  <span class="icon-twitter mr-3"></span> 
-                </a>
-                <a href="#" class="google">
-                  <span class="icon-google mr-3"></span> 
-                </a> -->
-              </div>
-            </form>
+                <button type="submit" class="btn w-100 py-3">Log In</button>
+              </form>
             </div>
           </div>
-          
         </div>
       </div>
     </div>
-  
   </div>
+</body>
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>

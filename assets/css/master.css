@@ -87,6 +87,12 @@ header{
   background-color: var(--main-color);
   height: 50vh;
 }
+/* Start Login style */
+@media (mix-width: 1199px ) and (min-width: 768){
+  .order-up{
+    order: 1 !important;
+  }
+}
 
 /* Main start */
 
@@ -403,5 +409,115 @@ form.search button{
 
   .book-reader iframe {
     height: 500px;
+  }
+}
+
+/* Profile Settings Styles */
+.settings-container {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 50px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile-avatar {
+  margin-bottom: 20px;
+}
+
+.profile-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile-avatar h2 {
+  color: var(--main-color);
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.settings-section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.settings-section h3 {
+  color: var(--main-color);
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.settings-section h3 i {
+  margin-right: 10px;
+  color: var(--alt-color);
+}
+
+.settings-form .form-group {
+  margin-bottom: 20px;
+}
+
+.settings-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.settings-form .form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.settings-form .btn {
+  margin-top: 10px;
+  background-color: #28a745;
+  color: var(--white);
+  border: none;
+}
+
+.settings-form .btn:hover {
+  background-color: #218838;
+  color: var(--white) !important;
+}
+
+.logout-form .btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.logout-form .btn:hover {
+  background-color: #c82333;
+  color: white !important;
+}
+
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 20px;
+    margin: 30px 0;
+  }
+
+  .profile-avatar img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-avatar h2 {
+    font-size: 1.8em;
+  }
+
+  .settings-section h3 {
+    font-size: 1.3em;
   }
 }
