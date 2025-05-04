@@ -69,7 +69,7 @@
           <!-- Personal Information Form -->
           <div class="settings-section">
             <h3><i class="fas fa-user"></i> Personal Information</h3>
-            <form action="./Controllers/profile contrllers/update_Info.php" method="post" class="settings-form">
+            <form action="./Controllers/profile-contrllers/update_Info.php" method="post" class="settings-form">
               <div class="form-group">
                 <label>Full Name</label>
                 <input type="text" name="fullname" class="form-control" placeholder="Your Full Name">
@@ -85,7 +85,7 @@
           <!-- Password Change Form -->
           <div class="settings-section">
             <h3><i class="fas fa-lock"></i> Change Password</h3>
-            <form action="./Controllers/profile contrllers/change_password.php" method="post" class="settings-form">
+            <form action="./Controllers/profile-contrllers/change_password.php" method="post" class="settings-form">
               <div class="form-group">
                 <label>Current Password</label>
                 <input type="password" name="current_password" class="form-control" required>
@@ -104,7 +104,7 @@
 
           <!-- Logout Button -->
           <div class="settings-section">
-            <form action="./Controllers/profile contrllers/logout.php" method="post" class="logout-form d-flex justify-content-center align-items-center">
+            <form action="./Controllers/profile-contrllers/logout.php" method="post" class="logout-form d-flex justify-content-center align-items-center">
               <button type="submit" name="logout" class="btn">
                 <i class="fas fa-sign-out-alt"></i> Logout
               </button>

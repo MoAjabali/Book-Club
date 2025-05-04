@@ -3,6 +3,8 @@
   $updateInfoUser = new UserController();
   session_start();
   try {
+    print_r($_POST);
+    print_r($_COOKIE);
     if($_POST){
       if (isset($_POST['fullname']) && isset($_POST['email'])) 
         $updateInfoUser->updateProfile($_POST['fullname'], $_POST['email']);

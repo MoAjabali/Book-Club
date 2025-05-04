@@ -1,6 +1,6 @@
 <?php
   include_once "../../models/model_user.php";
-  $logoutUserDB = new UserDB("book_club", "root");
+  $logoutUserDB = new UserDB();
 
   session_start();
   try {
