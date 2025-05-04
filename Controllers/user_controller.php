@@ -5,7 +5,7 @@
   class UserController{
     private $userModel;
     public function __construct(){
-      $this->userModel = new UserDB("book_club", "root");
+      $this->userModel = new UserDB();
     }
     private function getRememberToken(){
       if (!isset($_COOKIE['remember_me']))

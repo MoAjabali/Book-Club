@@ -92,7 +92,7 @@
   try {
     include_once "models/model_user.php";
     session_start();
-    $myDB = new UserDB("book_club", "root");
+    $myDB = new UserDB();
     if($_POST){
       $remember_me = isset($_POST['remember_me_btn']) ? true : false;
       $user = $myDB->search($_REQUEST['user_email'], $_REQUEST['user_password']);

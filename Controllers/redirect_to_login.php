@@ -1,7 +1,7 @@
 <?php
   try {
     include_once "models/model_user.php";
-    $check_db = new UserDB("book_club", "root");
+    $check_db = new UserDB();
     if (
       !(isset($_COOKIE['remember_me']) && 
       isset($_COOKIE['user_fullname']) && 

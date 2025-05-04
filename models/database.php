@@ -1,13 +1,19 @@
 <?php
+  require dirname(__DIR__) . "/../vandor/autoload.php";
+  $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+  $dotenv->load();
   class theDatabase {
     private $conn;
-    private $username, $password, $dsn;
+    private $username, $password, $dbname, $host;
+    private $dsn;
 
-    function __construct($dbname, $username, $password="") {
-      $this->username = $username;
-      $this->password = $password;
-      $servername="127.0.0.1";
-      $this->dsn = 'mysql:dbname='. $dbname.';host='. $servername;
+    function __construct() {
+      // $env
+      $this->username = $_ENV['DB_USERNAME'];
+      $this->password = $_ENV['DB_PASSWORD'];
+      $this->dbname = $_ENV['DB_NAME'];
+      $this->host =$_ENV['DB_HOST'];
+      $this->dsn = 'mysql:dbname='. $this->dbname.';host='. $this->host;
     }
 
     function getConnection(){

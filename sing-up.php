@@ -43,8 +43,8 @@
   <body>
   <div class="content">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 order-md-2">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-6 order-up">
           <img src="assets/images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
         </div>
         <div class="col-md-6 contents">
@@ -96,7 +96,7 @@
   try {
     include_once "models/model_user.php";
     session_start();
-    $myDB = new UserDB("book_club", "root");
+    $myDB = new UserDB();
     if($_POST){
       $remember_me = isset($_POST['remember_me_btn']) ? true : false;
       $user = $myDB->addUser($_REQUEST['user_fullname'], $_REQUEST['user_email'], $_REQUEST['user_password']);

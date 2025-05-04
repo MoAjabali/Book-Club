@@ -3,8 +3,8 @@
   class BookDB {
     // todo: Security & better & Error
     private $db;
-    function __construct($dbname, $username, $password="") {
-      $this->db = new theDatabase($dbname, $username, $password);
+    function __construct() {
+      $this->db = new theDatabase();
     }
     /*
       Array (

@@ -5,7 +5,7 @@
 
     // todo: Security & better & Error
     function __construct() {
-      $this->bookDB = new BookDB("book_club", "root");
+      $this->bookDB = new BookDB();
     }
 
     // todo: Upload A book
@@ -69,14 +69,14 @@
       // make the new path and file
       $filename = uniqid("file_");
       $extension = $allowedTypes[$filetype];
-      $targetDirectory = dirname(__DIR__) . "/uploads/$type"; // dirname(__DIR__) is the parent directory of the current PHP file  
+      $targetDirectory = dirname(__DIR__) . "/../uploads/$type"; // dirname(__DIR__) is the parent directory of the current PHP file  
       $newFilepath = $targetDirectory . "/" . $filename . "." . $extension;
     
       if (!copy($filepath, $newFilepath)) // Copy the file, returns false if failed
         throw new Exception("Can't move file.");
       unlink($filepath); // Delete the temp file
       
-      return "uploads/$type/$filename.$extension";
+      return "../uploads/$type/$filename.$extension";
     }
 
     // function getBook($book_name, $book_author){
