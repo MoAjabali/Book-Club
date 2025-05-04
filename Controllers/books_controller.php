@@ -76,7 +76,7 @@
         throw new Exception("Can't move file.");
       unlink($filepath); // Delete the temp file
       
-      return "../uploads/$type/$filename.$extension";
+      return dirname(__DIR__) . "/../uploads/$type/$filename.$extension";
     }
 
     // function getBook($book_name, $book_author){
