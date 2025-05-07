@@ -1,21 +1,10 @@
 <?php
   include_once "database.php";
   class BookDB {
-    // todo: Security & better & Error
     private $db;
     function __construct() {
       $this->db = new theDatabase();
     }
-    /*
-      Array (
-        [book_title] => Free Lancer 
-        [author_name] => Houseb 
-        [book_published_date] => 
-        [book_description] => 
-        [book_path] => uploads/pdfs/file_67f9fcd9e7c77.pdf 
-        [book_cover_image] => 
-      )
-    */
     function uploadBook($data){
       $data["book_description"] = ($data["book_description"]) ? $data["book_description"] : null ;
       $data["book_cover_image"] = ($data["book_cover_image"]) ? $data["book_cover_image"] : "uploads/imgs/default.png" ;

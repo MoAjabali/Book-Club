@@ -10,13 +10,6 @@
 
     // todo: Upload A book
     function addBook($data){
-      echo $data['author_name'];
-      echo "<br>";
-      echo "hello <br>";
-      echo $this->bookDB->getAuthor($data['author_name']);
-      echo "hello <br>";
-      echo "<br>";
-      echo "hello <br>";
       $data+=["author_id" => 0];
       // $inputs_array["book_description"] = ($inputs_array["book_description"]) ? $inputs_array["book_description"] : null;
       // echo  ($inputs_array["book_description"]) ? "true" : "false" ;
@@ -56,9 +49,9 @@
       if ($fileSize > (1024 * 1024 * $maxSizeInMB)) // 3 MB (1 byte * 1024 * 1024 * 3 (for 3 MB))
         throw new Exception("The file is too large");
       
-      if ($type = "pdfs")
+      if ($type == "pdfs")
         $allowedTypes = [ 'application/pdf' => 'pdf'];
-      elseif($type = "imgs")
+      elseif($type == "imgs")
         $allowedTypes = [ 'image/png' => 'png', 'image/jpeg' => 'jpg' ];
       else
         $allowedTypes = [];

@@ -1,7 +1,6 @@
 <?php
   include_once "database.php";
   class UserDB {
-    // todo: Security & better & Error
     private $db;
     function __construct() {
       $this->db = new theDatabase();

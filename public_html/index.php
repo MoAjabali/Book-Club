@@ -1,4 +1,7 @@
-<?php include "controllers/redirect_to_home.php"; ?>
+<?php 
+  define('BASE_BATH', __DIR__);
+  include "controllers/redirect_to_home.php"; 
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -25,8 +28,8 @@
             Book Club
           </div>
           <div class="links">
-            <a href="./login.php" class="btn bg-wh">login</a>
-            <a href="./sing-up.php" class="btn bg-wh">sing up</a>
+            <a href="<?=BASE_BATH?>/login.php" class="btn bg-wh">login</a>
+            <a href="<?=BASE_BATH?>/sing-up.php" class="btn bg-wh">sing up</a>
           </div>
       </nav>
     </header>
@@ -64,6 +67,7 @@
           <p class="box-heading">
             How to be one of <span>us?</span>
           </p>
+       
           <p class="box-details">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
             Quae illo repellat, eveniet voluptatum quam aspernatur nesciunt perspiciatis, 

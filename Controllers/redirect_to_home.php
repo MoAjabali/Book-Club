@@ -19,7 +19,8 @@
         'httponly' => true, // JavaScript not allowed
         'samesite' => 'Strict', // stop CSRF
       ]);
-      header("location: " . "home.php");
+      header("location: " . BASE_BATH ."/home.php");
+      exit();
     }
   } catch (\Throwable $th) {
     //throw $th;
