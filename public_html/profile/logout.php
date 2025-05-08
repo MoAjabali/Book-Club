@@ -1,5 +1,5 @@
 <?php
-  include_once "../../models/model_user.php";
+  require_once BASE_PATH . "/../models/model_user.php";
   $logoutUserDB = new UserDB();
 
   session_start();
@@ -9,11 +9,12 @@
     $logoutUserDB->updateToken(null, null, $_COOKIE['user_email']);
     setcookie("user_email", $_COOKIE['user_email'], ['expires' => time() - 1]);
     $_SESSION['error'] = 0;
-    header("location: ../../profile.php");
+    header("location: " . BASE_PATH . "/profile.php");
     exit();
   } catch (\Throwable $th) {
     $_SESSION['error'] = 1;
     $_SESSION['error_msg'] = $th->getMessage();
+    header("location: " . BASE_PATH . "/profile.php");
     exit();
   }
 ?>
