@@ -1,5 +1,6 @@
 <?php
-  require_once BASE_PATH . "/../models/model_user.php";
+  define('BASE_PATH', realpath(dirname(__DIR__)));
+  require_once BASE_PATH . "/../app/models/model_user.php";
   $logoutUserDB = new UserDB();
 
   session_start();

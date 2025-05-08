@@ -6,7 +6,7 @@
       header('Content-Disposition: attachment; filename="'.basename($file).'"');
       readfile($file);
       echo "Thank You For Download";
-      exit;
+      exit();
   } else {
       echo "file dose not exist";
   }

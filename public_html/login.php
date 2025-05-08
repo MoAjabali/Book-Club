@@ -1,5 +1,6 @@
 <?php
-  include "controllers/redirect_to_home.php";
+  define('BASE_PATH', realpath(__DIR__));
+  require BASE_PATH . "/../app/Controllers/redirect_to_home.php";
   function popupMsg($msg){
     echo <<<"msg"
     <div class="alert popup alert-danger alert-dismissible fade show" role="alert">
@@ -90,7 +91,7 @@
 
 <?php
   try {
-    include_once "models/model_user.php";
+    require_once BASE_PATH . "/../app/models/model_user.php";
     session_start();
     $myDB = new UserDB();
     if($_POST){
@@ -109,8 +110,8 @@
           'samesite' => 'Strict', // stop CSRF
         ]);
       }
-      header("location: home.php");
-      exit();
+      header("location: " . BASE_PATH . "/home.php");
+    exit();
     }
   } catch (\Throwable $th) {
     popupMsg($th->getMessage()); 

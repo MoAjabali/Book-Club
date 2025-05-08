@@ -1,6 +1,6 @@
 <?php
   try {
-    include_once "models/model_user.php";
+    require_once "./../models/model_user.php";
     $check_db = new UserDB();
     if (
       (isset($_COOKIE['remember_me']) && 
@@ -19,7 +19,7 @@
         'httponly' => true, // JavaScript not allowed
         'samesite' => 'Strict', // stop CSRF
       ]);
-      header("location: " . BASE_BATH ."/home.php");
+      header("location: " . "./../../public_html/home.php");
       exit();
     }
   } catch (\Throwable $th) {

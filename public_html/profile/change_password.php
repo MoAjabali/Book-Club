@@ -1,5 +1,6 @@
 <?php
-  require_once "../user_controller.php";
+  define('BASE_PATH', realpath(dirname(__DIR__)));
+  require_once BASE_PATH . "/../app/Controllers/user_controller.php";
   session_start();
   
   try {

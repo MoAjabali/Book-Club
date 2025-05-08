@@ -1,6 +1,6 @@
 <?php 
-  define('BASE_BATH', __DIR__);
-  include "controllers/redirect_to_home.php"; 
+  define('BASE_PATH', realpath(__DIR__));
+  require_once BASE_PATH . "/../app/Controllers/redirect_to_home.php"; 
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -28,8 +28,8 @@
             Book Club
           </div>
           <div class="links">
-            <a href="<?=BASE_BATH?>/login.php" class="btn bg-wh">login</a>
-            <a href="<?=BASE_BATH?>/sing-up.php" class="btn bg-wh">sing up</a>
+            <a href="/login.php" class="btn bg-wh">login</a>
+            <a href="/sing-up.php" class="btn bg-wh">sing up</a>
           </div>
       </nav>
     </header>
@@ -80,7 +80,7 @@
 
     <footer class="container">
       <div>
-        All Right Receved for <span>Book Club ®</span>
+        All Right Received for <span>Book Club &copy;</span>
       </div>
     </footer>
   </body>

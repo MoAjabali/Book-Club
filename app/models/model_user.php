@@ -1,5 +1,5 @@
 <?php
-  include_once "database.php";
+  require_once "../core/database.php";
   class UserDB {
     private $db;
     function __construct() {

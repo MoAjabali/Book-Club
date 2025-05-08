@@ -1,6 +1,6 @@
 <?php
   session_start();
-  require_once "../../models/model_user.php";
+  require_once "./../models/model_user.php";
 
   class UserController{
     private $userModel;
@@ -56,3 +56,4 @@
       }
     }
   }
+  $userController = new UserController();

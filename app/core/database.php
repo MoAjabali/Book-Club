@@ -1,7 +1,8 @@
 <?php
-  require realpath(__DIR__ . "/../../vendor/autoload.php");
-  $dotenv = Dotenv\Dotenv::createImmutable(realpath(__DIR__ . "/../.."));
+  require realpath("./../../vendor/autoload.php");
+  $dotenv = Dotenv\Dotenv::createImmutable(realpath("./../.."));
   $dotenv->load();
+  
   class theDatabase {
     private $conn;
     private $username, $password, $dbname, $host;
