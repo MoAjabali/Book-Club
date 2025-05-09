@@ -1,6 +1,5 @@
 <?php
-  define('BASE_PATH', realpath(__DIR__));
-  require BASE_PATH . "/../app/Controllers/redirect_to_home.php";
+  require $_SERVER['DOCUMENT_ROOT'] . "/../app/Controllers/redirect_to_home.php";
   function popupMsg($msg){
     echo <<<"msg"
     <div class="alert popup alert-danger alert-dismissible fade show" role="alert">
@@ -70,7 +69,7 @@
                     <input class="form-check-input" type="checkbox" checked name="remember_me_btn" id="remember">
                     <label class="form-check-label" for="remember">Remember me</label>
                   </div>
-                  <span class="ms-auto"><a href="./sing-up.php" class="text-decoration-none">or sign up</a></span> 
+                  <span class="ms-auto"><a href="sing-up.php" class="text-decoration-none">or sign up</a></span> 
                 </div>
 
                 <button type="submit" class="btn w-100 py-3">Log In</button>
@@ -91,7 +90,7 @@
 
 <?php
   try {
-    require_once BASE_PATH . "/../app/models/model_user.php";
+    require_once $_SERVER['DOCUMENT_ROOT'] . "/../app/models/model_user.php";
     session_start();
     $myDB = new UserDB();
     if($_POST){
@@ -110,8 +109,8 @@
           'samesite' => 'Strict', // stop CSRF
         ]);
       }
-      header("location: " . BASE_PATH . "/home.php");
-    exit();
+      header("location: /home.php");
+      exit();
     }
   } catch (\Throwable $th) {
     popupMsg($th->getMessage()); 

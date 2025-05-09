@@ -1,6 +1,5 @@
 <?php
-  define('BASE_PATH', realpath(dirname(__DIR__)));
-  require_once BASE_PATH . "/../app/Controllers/user_controller.php";
+  require_once $_SERVER['DOCUMENT_ROOT'] . "/../app/Controllers/user_controller.php";
   session_start();
   
   try {
@@ -13,11 +12,11 @@
       throw new Exception("Error Processing Request");
     $_SESSION['error'] = 0;
     $_SESSION['msg'] = "You Change Your Password successfully.";
-    header("location: " . BASE_PATH . "/profile.php");
+    header("location: /profile.php");
     exit();
   } catch (\Throwable $th) {
     $_SESSION['error'] = 1;
     $_SESSION['error_msg'] = $th->getMessage();
-    header("location: " . BASE_PATH . "/profile.php");
+    header("location: /profile.php");
     exit();
   }

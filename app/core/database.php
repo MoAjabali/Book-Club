@@ -1,6 +1,6 @@
 <?php
-  require realpath("./../../vendor/autoload.php");
-  $dotenv = Dotenv\Dotenv::createImmutable(realpath("./../.."));
+  require realpath( $_SERVER['DOCUMENT_ROOT'] ."/../vendor/autoload.php");
+  $dotenv = Dotenv\Dotenv::createImmutable(realpath($_SERVER['DOCUMENT_ROOT'] ."/.."));
   $dotenv->load();
   
   class theDatabase {

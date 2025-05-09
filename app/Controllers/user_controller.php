@@ -1,6 +1,6 @@
 <?php
   session_start();
-  require_once "./../models/model_user.php";
+  require_once realpath($_SERVER['DOCUMENT_ROOT'] . "/../app/models/model_user.php");
 
   class UserController{
     private $userModel;
@@ -24,9 +24,7 @@
         $token = $this->getRememberToken();
         $result = $this->userModel->updateUserInfo($current_email, $fullname, $new_email, $token);
         if ($result) {
-          $_SESSION['user_email'] = $new_email;
-          $_SESSION['user_fullname'] = $fullname;
-          return "Profile updated successfully";
+          return ["user_fullname"=> $fullname, "user_email"=>$new_email];
         }
       } catch (Exception $e) {
         throw $e;

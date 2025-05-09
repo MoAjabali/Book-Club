@@ -1,11 +1,10 @@
 <?php
-  define('BASE_PATH', realpath(__DIR__));
-  include BASE_PATH  . "/../app/Controllers/redirect_to_login.php";
-  include BASE_PATH  . "/../app/Controllers/books_controller.php";
+  include $_SERVER['DOCUMENT_ROOT']  . "/../app/Controllers/redirect_to_login.php";
+  include $_SERVER['DOCUMENT_ROOT']  . "/../app/Controllers/books_controller.php";
 
   // Get book details based on book_id
   if (!isset($_GET['book_id'])) {
-    header("location: " . BASE_PATH . "/home.php");
+    header("location: /home.php");
     exit();
   }
   
@@ -13,7 +12,7 @@
     $myBooks = new BookController();
     $book = $myBooks->getBookById($_GET['book_id']);
     if (!$book) {
-      header("location: " . BASE_PATH . "/home.php");
+      header("location: /home.php");
       exit();
     }
   } catch (\Throwable $th) {
@@ -45,7 +44,7 @@
           <div class="links">
             <a href="/home.php" class="btn"><i class="fas fa-book-reader"></i><span>Browse</span></a>
             <a href="/upload.php" class="btn"><i class="fas fa-cloud-upload-alt"></i><span>Upload</span></a>
-            <a href="/profile.php"><img src="./assets/images/avater.svg" alt="" srcset=""></a>
+            <a href="/profile.php"><img src="assets/images/avater.svg" alt="" srcset=""></a>
           </div>
       </nav>
     </div>
@@ -65,7 +64,8 @@
           </div>
           
           <div class="book-reader">
-            <iframe src="<?php echo $book['book_path']; ?>" width="100%" height="800px" frameborder="0"></iframe>
+            <?=$book['book_path']?>
+            <iframe src="<?php echo "/" . $book['book_path'] . "?ts=" . time(); ?>" width="100%" height="800px" frameborder="0"></iframe>
           </div>
         </div>
       </div>

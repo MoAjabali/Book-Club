@@ -1,6 +1,5 @@
 <?php 
-  define('BASE_PATH', realpath(__DIR__));
-  require_once BASE_PATH . "/../app/Controllers/redirect_to_home.php"; 
+  require_once $_SERVER['DOCUMENT_ROOT'] . "/../app/Controllers/redirect_to_home.php"; 
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

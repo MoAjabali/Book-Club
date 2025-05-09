@@ -1,6 +1,6 @@
 <?php
   try {
-    require_once "./../models/model_user.php";
+    require_once realpath($_SERVER['DOCUMENT_ROOT'] . "/../app/models/model_user.php");
     $check_db = new UserDB();
     if (
       !(isset($_COOKIE['remember_me']) && 
@@ -8,7 +8,7 @@
       isset($_COOKIE['user_email']) &&
       $check_db->checkUser($_COOKIE['remember_me'], $_COOKIE['user_email']))
     ) {
-      header("location: " . "./../../public_html/login.php");
+      header("location: /login.php");
       exit();
     }else{
       setcookie("user_fullname", $_COOKIE['user_fullname'], ['expires' => time() + (30 * 24 * 60 * 60)]);

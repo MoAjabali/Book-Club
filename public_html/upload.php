@@ -1,7 +1,6 @@
 <?php
-  define('BASE_PATH', realpath(__DIR__));
-  include BASE_PATH  . "/../app/Controllers/redirect_to_login.php";
-  include BASE_PATH  . "/../app/Controllers/books_controller.php";
+  include $_SERVER['DOCUMENT_ROOT']  . "/../app/Controllers/redirect_to_login.php";
+  include $_SERVER['DOCUMENT_ROOT']  . "/../app/Controllers/books_controller.php";
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +32,7 @@
           <div class="links">
             <a href="/home.php" class="btn"><i class="fas fa-book-reader"></i><span>Browse</span></a>
             <a href="/upload.php" class="btn bg-wh"><i class="fas fa-cloud-upload-alt"></i><span>Upload</span></a>
-            <a href="/profile.php"><img src="./assets/images/avater.svg" alt="" srcset=""></a>
+            <a href="/profile.php"><img src="assets/images/avater.svg" alt="" srcset=""></a>
           </div>
       </nav>
     </div>

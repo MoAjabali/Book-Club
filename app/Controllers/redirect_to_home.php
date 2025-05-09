@@ -1,6 +1,6 @@
 <?php
   try {
-    require_once "./../models/model_user.php";
+    require_once realpath($_SERVER['DOCUMENT_ROOT'] . "/../app/models/model_user.php");
     $check_db = new UserDB();
     if (
       (isset($_COOKIE['remember_me']) && 
@@ -19,7 +19,7 @@
         'httponly' => true, // JavaScript not allowed
         'samesite' => 'Strict', // stop CSRF
       ]);
-      header("location: " . "./../../public_html/home.php");
+      header("location: /home.php");
       exit();
     }
   } catch (\Throwable $th) {

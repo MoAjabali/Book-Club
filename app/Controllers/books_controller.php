@@ -1,5 +1,5 @@
 <?php
-  require_once "./../models/model_book.php";
+  require_once realpath($_SERVER['DOCUMENT_ROOT'] . "/../app/models/model_book.php");
   class BookController {
     private $bookDB;
 
@@ -62,14 +62,14 @@
       // make the new path and file
       $filename = uniqid("file_");
       $extension = $allowedTypes[$filetype];
-      $targetDirectory = dirname(__DIR__) . "/../storage/uploads/$type"; // dirname(__DIR__) is the parent directory of the current PHP file  
+      $targetDirectory = realpath($_SERVER['DOCUMENT_ROOT'] . "/uploads/$type"); // dirname(__DIR__) is the parent directory of the current PHP file  
       $newFilepath = $targetDirectory . "/" . $filename . "." . $extension;
     
       if (!copy($filepath, $newFilepath)) // Copy the file, returns false if failed
         throw new Exception("Can't move file.");
       unlink($filepath); // Delete the temp file
       
-      return dirname(__DIR__) . "/../storage/uploads/$type/$filename.$extension";
+      return "uploads/$type/$filename.$extension";
     }
 
     // function getBook($book_name, $book_author){

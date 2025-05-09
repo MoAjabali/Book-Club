@@ -1,5 +1,5 @@
 <?php
-  require_once "../core/database.php";
+  require_once $_SERVER['DOCUMENT_ROOT'] . "/../app/core/database.php";
   class UserDB {
     private $db;
     function __construct() {

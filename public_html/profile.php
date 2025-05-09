@@ -1,6 +1,5 @@
 <?php
-  define('BASE_PATH', realpath(__DIR__));
-  include BASE_PATH  . "/../app/Controllers/redirect_to_login.php";
+  include $_SERVER['DOCUMENT_ROOT']  . "/../app/Controllers/redirect_to_login.php";
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +28,7 @@
           <div class="links">
             <a href="/home.php" class="btn"><i class="fas fa-book-reader"></i><span>Browse</span></a>
             <a href="/upload.php" class="btn"><i class="fas fa-cloud-upload-alt"></i><span>Upload</span></a>
-            <a href="/profile.php"><img src="./assets/images/avater.svg" alt="" srcset=""></a>
+            <a href="/profile.php"><img src="assets/images/avater.svg" alt="" srcset=""></a>
           </div>
       </nav>
     </div>
@@ -40,7 +39,7 @@
           <!-- Profile Header -->
           <div class="profile-header">
             <div class="profile-avatar">
-              <img src="./assets/images/avater.svg" alt="Profile Picture">
+              <img src="assets/images/avater.svg" alt="Profile Picture">
               <h2>Profile Settings</h2>
             </div>
           </div>
@@ -119,6 +118,6 @@
         All Right Receved for <span>Book Club ®</span>
       </div>
     </footer>
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
