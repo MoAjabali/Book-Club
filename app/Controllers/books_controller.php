@@ -85,5 +85,5 @@
   // echo "<pre>";
   // print_r($bookDB->getBooks());
   // print_r($bookDB->searchForBooks("unknown"));
-  // print_r($bookDB->getBook("Database deisign", "'unknown'"));
+  // print_r($bookDB->getBook("Database design", "'unknown'"));
   // echo "</pre>";

@@ -64,9 +64,12 @@
           </div>
           
           <div class="book-reader">
-            <?=$book['book_path']?>
-            <iframe src="<?php echo "/" . $book['book_path'] . "?ts=" . time(); ?>" width="100%" height="800px" frameborder="0"></iframe>
-          </div>
+            <iframe src="<?php echo 'view_pdf.php?file=' . $book['book_path']; ?>" 
+                    width="100%" 
+                    height="800px" 
+                    frameborder="0"
+                    type="application/pdf">
+            </iframe>
         </div>
       </div>
     </div>
